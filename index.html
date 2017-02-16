@@ -18,11 +18,11 @@
 	
 	<div id="add-container">
 	  <input id="chapter-name" name="chapter-name" placeholder="	chapter name">
-	  <select id="chapter-timing-hours"	></select>
-	  <input data-placeholder="HH" type="hidden" id="hours"> MM
-	  <select name="chapter-timing-minutes" id="chapter-timing-minutes"></select>
-	  <input type="hidden" id="minutes"> SS
-	  <select name="chapter-timing-seconds" id="chapter-timing-seconds"></select>
+	  <select id="chapter-timing-hours"><option value="0" default>HH</option></select>
+	  <input type="hidden" id="hours">
+	  <select name="chapter-timing-minutes" id="chapter-timing-minutes"><option value="0" default>MM</option></select>
+	  <input type="hidden" id="minutes">
+	  <select name="chapter-timing-seconds" id="chapter-timing-seconds"><option value="0" default>SS</option></select>
 	  <input type="hidden" id="seconds">
 
 	  <button id="add-chapter" type="submit" value="Submit">Add new chapter</button>
