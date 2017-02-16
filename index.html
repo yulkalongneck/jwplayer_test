@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jwplayer_test</title>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<video id="video">
+  	<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg"></source>
+	</video>
+
+	<p>
+	  <button id="play">PLAY </button>
+ 	 	<button id="pause">PAUSE </button>
+ 	</p>
+
+	<div id="new-chapter">
+	
+	</div>
+	
+	<div id="add-container">
+	  <input id="chapter-name" name="chapter-name" placeholder="	chapter name"> HH
+	  <select name="chapter-timing-hours" id="chapter-timing-hours"	></select>
+	  <input type="hidden" id="hours"> MM
+	  <select name="chapter-timing-minutes" id="chapter-timing-minutes"></select>
+	  <input type="hidden" id="minutes"> SS
+	  <select name="chapter-timing-seconds" id="chapter-timing-seconds"></select>
+	  <input type="hidden" id="seconds">
+	  <button id="add-chapter" type="submit" value="Submit">Add new chapter</button>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="player.js"></script>
+</body>
+</html>
