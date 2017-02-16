@@ -20,14 +20,14 @@ pause.addEventListener("click", function() {
 // hours
 var hours = $(function() {
   var $timeHours = $("#chapter-timing-hours");
-  for (var i = 00; i <= 3; i++) {
+  for (var i = 1; i <= 3; i++) {
     $timeHours.append($('<option value='+ i +'> 0'+i+'</option>'));
   }
 });
 //minutes
 var minutes = $(function() {
   var $timeMinutes = $("#chapter-timing-minutes");
-  for (var i = 0; i <= 9; i++) {
+  for (var i = 1; i <= 9; i++) {
     $timeMinutes.append($('<option value='+ i +'> 0'+i+'</option>'));
   }
   for (var i = 10; i <= 59; i++) {
@@ -37,7 +37,7 @@ var minutes = $(function() {
 // seconds
 var seconds = $(function() {
   var $timeSeconds = $("#chapter-timing-seconds");
-  for (var i = 0; i <= 9; i++) {
+  for (var i = 1; i <= 9; i++) {
     $timeSeconds.append($('<option value='+ i +'> 0'+i+'</option>'));
   }
   for (var i = 10; i <= 59; i++) {
