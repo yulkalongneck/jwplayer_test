@@ -21,21 +21,27 @@ pause.addEventListener("click", function() {
 var hours = $(function() {
   var $timeHours = $("#chapter-timing-hours");
   for (var i = 00; i <= 3; i++) {
-    $timeHours.append($('<option></option>').val(i).html(i));
+    $timeHours.append($('<option value='+ i +'> 0'+i+'</option>'));
   }
 });
 //minutes
 var minutes = $(function() {
   var $timeMinutes = $("#chapter-timing-minutes");
-  for (var i = 0; i <= 59; i++) {
-    $timeMinutes.append($('<option></option>').val(i).html(i))
+  for (var i = 0; i <= 9; i++) {
+    $timeMinutes.append($('<option value='+ i +'> 0'+i+'</option>'));
+  }
+  for (var i = 10; i <= 59; i++) {
+    $timeMinutes.append($('<option value='+ i +'>'+i+'</option>'));
   }
 });
 // seconds
 var seconds = $(function() {
   var $timeSeconds = $("#chapter-timing-seconds");
-  for (var i = 0; i <= 59; i++) {
-    $timeSeconds.append($('<option></option>').val(i).html(i))
+  for (var i = 0; i <= 9; i++) {
+    $timeSeconds.append($('<option value='+ i +'> 0'+i+'</option>'));
+  }
+  for (var i = 10; i <= 59; i++) {
+    $timeSeconds.append($('<option value='+ i +'>'+i+'</option>'));
   }
 });
 
@@ -57,7 +63,7 @@ addChapter.addEventListener("click", function() {
   } else if (time > video.duration) {
     alert("This video is not long enough!");
     // time validation
-  } else if ((parseInt($Seconds)) == 0) {
+  } else if (time == 0) {
     alert("Seconds can't be equal to 0!");
   } else {
     var nameid = name.replace(/\s+/g, "-");
